@@ -7,9 +7,11 @@ Hence $(ATCF_CDL_TOOLS_PATH)/tools/bin/cdl will be the cdl tool, and $(ATCF_CDL_
 
 """
 default_config="all"
+configs         = ["all"]
 base_repos=["atcf_hardware_std", "atcf_hardware_apb", "atcf_hardware_utils", "atcf_hardware_video", "atcf_hardware_io"]
 workflow="single"
 stages=["clean", "build", "test"]
+logging         = "Yes"
 
 [env]
 PATH="@ATCF_CDL_TOOLS_PATH@/tools/bin:@ATCF_CDL_TOOLS_PATH@/grip:@PATH@"

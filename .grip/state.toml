@@ -1,0 +1,19 @@
+[all.atcf_hardware_std]
+changeset = "8f9612868060fb819a0536f5b937cb00bb3598d7"
+branch = "master"
+
+[all.atcf_hardware_apb]
+changeset = "be8ca5dfa6c09883a9b22e964e8382158018a32e"
+branch = "master"
+
+[all.atcf_hardware_utils]
+changeset = "06876feee8b94ba4c51c787fae405633cfdf3059"
+branch = "master"
+
+[all.atcf_hardware_video]
+changeset = "861ac8457a206cb59f7e3647cd73dd0f62d66b7f"
+branch = "master"
+
+[all.atcf_hardware_io]
+changeset = "a515d7d4ad88d6c216ec0b6f14536d095805ff0c"
+branch = "master"
