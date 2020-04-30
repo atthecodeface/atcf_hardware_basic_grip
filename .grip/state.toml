@@ -7,7 +7,7 @@ changeset = "be8ca5dfa6c09883a9b22e964e8382158018a32e"
 branch = "master"
 
 [all.atcf_hardware_utils]
-changeset = "06876feee8b94ba4c51c787fae405633cfdf3059"
+changeset = "c72bb54c083ca4e78197cbd790e487b3cd34f94d"
 branch = "master"
 
 [all.atcf_hardware_video]

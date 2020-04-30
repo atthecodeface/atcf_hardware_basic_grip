@@ -10,7 +10,7 @@ default_config="all"
 configs         = ["all"]
 base_repos=["atcf_hardware_std", "atcf_hardware_apb", "atcf_hardware_utils", "atcf_hardware_video", "atcf_hardware_io"]
 workflow="single"
-stages=["clean", "build", "test"]
+stages=["clean", "build", "build_sim", "smoke_test"]
 logging         = "Yes"
 
 [env]
@@ -27,24 +27,29 @@ VERILATOR_SHARE="@ATCF_CDL_TOOLS_PATH@/tools/share/verilator"
 url="https://github.com/atthecodeface/atcf_hardware_std.git"
 branch="master"
 path="atcf_hardware_std"
+build_sim.satisfies="build"
 
 [repo.atcf_hardware_utils]
 url="https://github.com/atthecodeface/atcf_hardware_utils.git"
 branch="master"
 path="atcf_hardware_utils"
+build_sim.satisfies="build"
 
 [repo.atcf_hardware_io]
 url="https://github.com/atthecodeface/atcf_hardware_io.git"
 branch="master"
 path="atcf_hardware_io"
+build_sim.satisfies="build"
 
 [repo.atcf_hardware_video]
 url="https://github.com/atthecodeface/atcf_hardware_video.git"
 branch="master"
 path="atcf_hardware_video"
+build_sim.satisfies="build"
 
 [repo.atcf_hardware_apb]
 url="https://github.com/atthecodeface/atcf_hardware_apb.git"
 branch="master"
 path="atcf_hardware_apb"
+build_sim.satisfies="build"
 
