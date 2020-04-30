@@ -1,0 +1,48 @@
+name = "atcf_hardware_basic_grip"
+doc="""
+This repository is for building, testing and running some of the basic ATCF CDL hardware.
+
+It requires ATCF_CDL_TOOLS_PATH to point to an ATCF CDL tools grip directory configured with at least grip and CDL.
+Hence $(ATCF_CDL_TOOLS_PATH)/tools/bin/cdl will be the cdl tool, and $(ATCF_CDL_TOOLS_PATH)/grip/grip will be the grip tool.
+
+"""
+default_config="all"
+base_repos=["atcf_hardware_std", "atcf_hardware_apb", "atcf_hardware_utils", "atcf_hardware_video", "atcf_hardware_io"]
+workflow="single"
+stages=["clean", "build", "test"]
+
+[env]
+PATH="@ATCF_CDL_TOOLS_PATH@/tools/bin:@ATCF_CDL_TOOLS_PATH@/grip:@PATH@"
+BUILD_DIR="@GRIP_ROOT_PATH@/build"
+ATCF_CDL_TOOLS_PATH="@ATCF_CDL_TOOLS_PATH@"
+CDL_ROOT="@ATCF_CDL_TOOLS_PATH@/tools"
+VERILATOR_ROOT="@ATCF_CDL_TOOLS_PATH@/tools"
+VERILATOR_SHARE="@ATCF_CDL_TOOLS_PATH@/tools/share/verilator"
+
+[config.all]
+
+[repo.atcf_hardware_std]
+url="https://github.com/atthecodeface/atcf_hardware_std.git"
+branch="master"
+path="atcf_hardware_std"
+
+[repo.atcf_hardware_utils]
+url="https://github.com/atthecodeface/atcf_hardware_utils.git"
+branch="master"
+path="atcf_hardware_utils"
+
+[repo.atcf_hardware_io]
+url="https://github.com/atthecodeface/atcf_hardware_io.git"
+branch="master"
+path="atcf_hardware_io"
+
+[repo.atcf_hardware_video]
+url="https://github.com/atthecodeface/atcf_hardware_video.git"
+branch="master"
+path="atcf_hardware_video"
+
+[repo.atcf_hardware_apb]
+url="https://github.com/atthecodeface/atcf_hardware_apb.git"
+branch="master"
+path="atcf_hardware_apb"
+
