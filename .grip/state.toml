@@ -3,15 +3,15 @@ changeset = "fba77e7de21da7092d7c14bedc806764572b4d2a"
 branch = "master"
 
 [all.atcf_hardware_apb]
-changeset = "a822a2992b68ed98a0e24ce27bbab610708b5510"
+changeset = "f679bdd0e4cab20cde03dd750da16cbdc6bf46e3"
 branch = "master"
 
 [all.atcf_hardware_utils]
-changeset = "804c107700ee1e4272038304504235130ccf3e03"
+changeset = "bcfdd29ecb880afff7834306a9dd7e15a8c2c32b"
 branch = "master"
 
 [all.atcf_hardware_video]
-changeset = "523c059868769c089ee6de5b5170b14b7c2332ad"
+changeset = "eaab5a2513991b9e26ab50ffc2abefd89d041913"
 branch = "master"
 
 [all.atcf_hardware_io]
