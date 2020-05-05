@@ -10,7 +10,7 @@ default_config="all"
 configs         = ["all"]
 base_repos=["atcf_hardware_std", "atcf_hardware_apb", "atcf_hardware_utils", "atcf_hardware_video", "atcf_hardware_io"]
 workflow="single"
-stages=["clean", "build", "build_sim", "smoke_test"]
+stages=["clean", "build", "smoke"]
 logging         = "Yes"
 
 [env]
@@ -23,33 +23,47 @@ VERILATOR_SHARE="@ATCF_CDL_TOOLS_PATH@/tools/share/verilator"
 
 [config.all]
 
+[config.all.env]
+SRC_ROOT     = "@GRIP_ROOT_PATH@/atcf_hardware_video @GRIP_ROOT_PATH@/atcf_hardware_utils"
+MAKE_OPTIONS = "-f @GRIP_ROOT_PATH@/atcf_hardware_video/Makefile SRC_ROOT='@SRC_ROOT@' BUILD_ROOT=@BUILD_DIR@"
+
+[config.all.stage.clean_all_sim]
+exec="mkdir -p @BUILD_DIR@ && cd @BUILD_DIR@ && make @MAKE_OPTIONS@ clean"
+
+[config.all.stage.build]
+requires=["clean_all_sim"]
+wd="@BUILD_DIR@"
+exec="make @MAKE_OPTIONS@ -j8 all"
+
+[config.all.stage.smoke]
+action="yes"
+
 [repo.atcf_hardware_std]
 url="https://github.com/atthecodeface/atcf_hardware_std.git"
 branch="master"
 path="atcf_hardware_std"
-build_sim.satisfies="build"
+smoke_test.satisfies="smoke"
 
 [repo.atcf_hardware_utils]
 url="https://github.com/atthecodeface/atcf_hardware_utils.git"
 branch="master"
 path="atcf_hardware_utils"
-build_sim.satisfies="build"
+smoke_test.satisfies="smoke"
 
 [repo.atcf_hardware_io]
 url="https://github.com/atthecodeface/atcf_hardware_io.git"
 branch="master"
 path="atcf_hardware_io"
-build_sim.satisfies="build"
 
 [repo.atcf_hardware_video]
 url="https://github.com/atthecodeface/atcf_hardware_video.git"
 branch="master"
 path="atcf_hardware_video"
-build_sim.satisfies="build"
+smoke_test.satisfies="smoke"
 
 [repo.atcf_hardware_apb]
 url="https://github.com/atthecodeface/atcf_hardware_apb.git"
 branch="master"
 path="atcf_hardware_apb"
-build_sim.satisfies="build"
+smoke_test.satisfies="smoke"
 
