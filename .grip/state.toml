@@ -1,19 +1,19 @@
 [all.atcf_hardware_std]
-changeset = "fba77e7de21da7092d7c14bedc806764572b4d2a"
+changeset = "7870bdfcbd39bca42e3ef63073ee4e628656fa6a"
 branch = "master"
 
 [all.atcf_hardware_apb]
-changeset = "f679bdd0e4cab20cde03dd750da16cbdc6bf46e3"
+changeset = "58b3b8bae7cb602042c43e3f361a56b2853f85f1"
 branch = "master"
 
 [all.atcf_hardware_utils]
-changeset = "bcfdd29ecb880afff7834306a9dd7e15a8c2c32b"
+changeset = "94af5cf5ac93d5b3155967f1c5ca7833dd01ef73"
 branch = "master"
 
 [all.atcf_hardware_video]
-changeset = "eaab5a2513991b9e26ab50ffc2abefd89d041913"
+changeset = "d6f8bdd1eddf5394c01291d3d116da49fc1096f4"
 branch = "master"
 
 [all.atcf_hardware_io]
-changeset = "bc3cac7caa5bdd1cb944755e8683c576041b64db"
+changeset = "bf86eb7c7ae03be190718a583dbda901bdac799a"
 branch = "master"
